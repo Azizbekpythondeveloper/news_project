@@ -1,0 +1,17 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %}
+    Xorij xabarlar
+{% endblock title %}
+
+{% block content %}
+{% for news in xorij_yangiliklar %}
+    <div class="clearfix">
+        <img src="{{news.images.url}}" class="col-md-3 float-md-end mb-6 ms-md-3" alt="...">
+        <p>
+            {{news.title}}
+        </p>
+    </div>
+{% endfor %}
+{% endblock content %}
